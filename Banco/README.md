@@ -7,7 +7,7 @@ Uma das atividades propostas pelo instituto PROA. O sistema tem a proposta de si
 > var nomeCLiente = "";
 var contadorDeChamadas = 0;
 ```
-essas variáveis são globais. A variável nomeCLiente vai armazenar o nome do cliente e o contadorDeChamadas vai verificar se a função cliente já foi chamada.
+essas variáveis são globais. A variável "nomeCLiente" vai armazenar o nome do cliente e o "contadorDeChamadas" vai verificar se a função cliente já foi chamada.
 
 ```
  fun cliente() {
@@ -104,7 +104,7 @@ fun fazerSaque(saldo: Double) {
     }
 }
 ```
-Um método resoponsavel pelo saque do cliente. Onde o saque não pode ser menor ou igual a 0 (zero).
+Um método responsável pelo saque do cliente. Onde o saque não pode ser menor ou igual a 0 (zero).
 ```
 fun extrato() {
     println("Password");
@@ -120,7 +120,7 @@ fun extrato() {
     }
 }
 ```
-Um método resoponsavel pela exibição do extrato bancario do cliente. Onde suas compras e depósitos são armazenados em array's e são exibidos ao acessar a função
+Um método resoponsável pela exibição do extrato bancario do cliente. Onde suas compras e depósitos são armazenados em array's e são exibidos ao acessar a função
 ```
 fun trasferencia(saldo: Double) {
     println("Password");
