@@ -1,5 +1,5 @@
 <div align = "center">
-  <img src = "favicon">
+  <img src = "favicon.webp">
 </div>
 
 # PROA-desafios
