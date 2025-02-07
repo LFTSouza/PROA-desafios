@@ -143,7 +143,7 @@ fun trasferencia(saldo: Double) {
     }
 }
 ```
-Um método responavel pelas transferencias de um cliente para outro cliente. Onde o usuário tem que informar o número da conta do destinatário e o valor da transferência, essa transferencia não pode ser menor ou igual a 0 (zero).
+Um método responsável pelas transferencias de um cliente para outro cliente. Onde o usuário tem que informar o número da conta do destinatário e o valor da transferência, essa transferencia não pode ser menor ou igual a 0 (zero).
 ```
 fun palavraPasse(senha: Int) {
     if (senha != 3589) {
