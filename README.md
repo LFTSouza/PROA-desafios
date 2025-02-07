@@ -1,5 +1,5 @@
 <div align = "center">
-  <img src = "Proa.jpeg">
+  <img src = "favicon">
 </div>
 
 # PROA-desafios
