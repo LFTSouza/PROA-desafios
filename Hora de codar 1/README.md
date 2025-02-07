@@ -10,4 +10,4 @@ Exercícios propostos pelo professor do instituto PROA
 
 4 - Escreva um programa que calcule a área das seguintes formas geométricas: Retângulo, Quadrado, Losangulo, Trapézio, Paralelograma, Triângulo, Circulo
 
-Realizei os exercícios com a linguagem Java para me familiarizar com a linguagem
+- Realizei os exercícios com a linguagem Java para me familiarizar com a linguagem
