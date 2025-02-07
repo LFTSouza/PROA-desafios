@@ -1,5 +1,5 @@
 <div align = "center">
-  <img src = "icon.png">
+  <img src = "Icon.png">
 </div>
 
 # PROA-desafios
