@@ -1,4 +1,4 @@
-# :leaves: command_for_mongodb_training
+# :leaves: Momentos
 Este repositório foi feito com o intuito de treinar querrys mais complexas no mongoshell. Utilizei algumas questões que foram produzidas pelo meu professor do instituto PROA e, também, utilizei uma empresa ficticia chamada "Momentos" também feitas pelo professor do instituto PROA.
 ## Questões e respostas:
 
