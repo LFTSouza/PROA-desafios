@@ -54,7 +54,7 @@ class Menu(private val gravadorAluno: GravadorAluno, private val mostrarAlunos: 
             val nomeDigitado = readln();
             val aluno = Aluno(nomeDigitado);
             gravadorAluno.gravar(aluno);
-            println("A lista está com pleta? deseja continuar? Pare para parar / Não para continuar")
+            println("A lista está completa? deseja continuar? Pare para parar / Não para continuar")
             val stop = readln();
         }while (stop != "Pare")
         mostrarAlunos.listar();
