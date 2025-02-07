@@ -63,13 +63,11 @@ Atividades para trabalhar com o Oscar
             categoria: "ACTRESS"
         }
     },
-
     {
     $sort:{
         ano_cerimonia: -1
     },
     },
-
     {
         $project: {
             ano_cerimonia: 1
@@ -88,20 +86,17 @@ Atividades para trabalhar com o Oscar
             categoria: "ACTRESS"
         }
     },
-
     {
         $sort: {
             vencedor: -1
         },
     },
-
     {
         $project: {
             ano_cerimonia: 1,
             nome_do_indicado: 1
         }
     },
-
     {
         $limit: 1
     }
@@ -161,8 +156,7 @@ Atividades para trabalhar com o Oscar
     nome_do_indicado: "Ansel Elgort",
     nome_do_filme: "Baby drive",
     vencedor: 1
-    },
-    
+    }, 
     {
         ano_filmagem: 2019,
         ano_cerimonia: 2020,
@@ -172,7 +166,6 @@ Atividades para trabalhar com o Oscar
         nome_do_filme: "Rocketman",
         vencedor: 1
     },
-
     {
         ano_filmagem: 2012,
         ano_cerimonia: 2013,
