@@ -5,16 +5,16 @@ Este repositório, também, apresenta exercícios e as soluções que eu encontr
 Atividades para trabalhar com o Oscar
 
 1- Quantas vezes Natalie Portman foi indicada ao Oscar?
-- db.registro.find(
+> db.registro.find(
     {nome_do_indicado: "Natalie Portman"})
     
 2- Quantos Oscars Natalie Portman ganhou?
-- db.registro.countDocuments(
+> db.registro.countDocuments(
     {nome_do_indicado: "Natalie Portman"}, 
     {vencedor: true})
 
 3- Amy Adams já ganhou algum Oscar?
-- db.registro.aggregate([
+> db.registro.aggregate([
     {
             $match: {
                 nome_do_indicado: "Emy Adams"
@@ -36,7 +36,7 @@ Atividades para trabalhar com o Oscar
 
 4- A série de filmes Toy Story ganhou um Oscar em quais anos?
 
-- db.registro.aggregate([
+> db.registro.aggregate([
         { 
             $match: {
             nome_do_filme: "Toy Story"
@@ -57,7 +57,7 @@ Atividades para trabalhar com o Oscar
 
 5- A partir de que ano que a categoria "Actress" deixa de existir? 
 
--  db.registro.aggregate([
+>  db.registro.aggregate([
     {
         $match: {
             categoria: "ACTRESS"
@@ -82,7 +82,7 @@ Atividades para trabalhar com o Oscar
 
 6- O primeiro Oscar para melhor Atriz foi para quem? Em que ano?
 
-- db.registro.aggregate([
+> db.registro.aggregate([
     {
         $match: {
             categoria: "ACTRESS"
@@ -109,13 +109,13 @@ Atividades para trabalhar com o Oscar
 
 7- Na campo "Vencedor", altere todos os valores com "Sim" para 1 e todos os valores "Não" para 0.
 
-- db.registro.updateOne({vencedor: "true"}, {$set: {vencedor: 1}})
+> db.registro.updateOne({vencedor: "true"}, {$set: {vencedor: 1}})
 
   db.registro.updateOne({vencedor: "false"}, {$set: {vencedor: 0}})
 
 8- Em qual edição do Oscar "Crash" concorreu ao Oscar?
 
- - db.registro.aggregate([
+ > db.registro.aggregate([
     {
     $match: {
         nome_do_filme: "Crash"
@@ -135,7 +135,7 @@ Atividades para trabalhar com o Oscar
 
 9- Bom... dê um Oscar para um filme que merece muito, mas não ganhou.
 
-- db.registro.insertOne({
+> db.registro.insertOne({
     ano_filmagem: 2019,
     ano_cerimonia: 2020,
     cerimonia: 92,
@@ -148,11 +148,11 @@ Atividades para trabalhar com o Oscar
 
 10- O filme Central do Brasil aparece no Oscar?
 
--  db.registro.countDocuments({ nome_do_filme: /Central do Brasil/i })
+>  db.registro.countDocuments({ nome_do_filme: /Central do Brasil/i })
 
 11- Inclua no banco 3 filmes que nunca foram nem nomeados ao Oscar, mas que merecem ser.
 
-- db.registro.insertMany([
+> db.registro.insertMany([
     {
     ano_filmagem: 2017,
     ano_cerimonia: 2018,
@@ -187,7 +187,7 @@ Atividades para trabalhar com o Oscar
 
 12 - Pensando no ano em que você nasceu: Qual foi o Oscar de melhor filme, Melhor Atriz e Melhor Diretor?
 
-- db.registro.aggregate([
+> db.registro.aggregate([
     {
         $match: {
           ano_cerimonia: 2003
