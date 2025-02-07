@@ -1,6 +1,6 @@
-
-![images](https://github.com/user-attachments/assets/b04bcbd0-413a-4287-8d08-5373b574b0a6)
-
+<div align = "center">
+  <img src = "Proa.jpeg">
+</div>
 
 # PROA-desafios
 No tempo em que passei no instituto PROA eu realizei diversos desafios para o amadurecimento das minhas habilidades no desenvolvimento de softwares.
