@@ -5,6 +5,6 @@ class MostrarAlunos(private val caminho: Caminho) {
     {
         val alunos = caminho.getLista();
         alunos.forEach(){ println(it) }
-        println("O total de alunos é: ${alunos.size}");
+        println("O total de alunos é: ${alunos.size+1}");
     }
 }
