@@ -15,41 +15,31 @@ class Abastecer {
         when {
             priceGasWayne < priceGasStark || priceAlchoolWayne < priceGasStark -> {
                 if (priceGasWayne > priceAlchoolWayne) {
-                    porcentCalculator(priceGasWayne, priceAlchoolWayne);
-                } else if (priceGasWayne < priceAlchoolWayne) {
-                    porcentCalculator(priceAlchoolWayne, priceGasWayne);
+                    porcentCalculator(priceGasWayne, priceAlchoolWayne, "Wayne oil");
+                } else {
+                    porcentCalculator(priceAlchoolWayne, priceGasWayne, "Wayne oil");
                 };
             };
 
             priceGasWayne > priceGasStark || priceAlchoolWayne > priceGasStark -> {
                 if (priceGasStark > priceAlchoolStark) {
-                    porcentCalculator(priceGasStark, priceAlchoolStark);
-                } else if (priceGasStark < priceAlchoolStark) {
-                    porcentCalculator(priceAlchoolStark, priceGasStark);
+                    porcentCalculator(priceGasStark, priceAlchoolStark, "Stark petrol");
+                } else {
+                    porcentCalculator(priceAlchoolStark, priceGasStark, "Stark petrol");
                 };
             };
         };
     };
 
-    private fun porcentCalculator(price1: Double, price2: Double) {
-        val porcent: Double;
-        if (price1 > price2) {
+    private fun porcentCalculator(price1: Double, price2: Double, nomePosto: String) {
+        val porcent: Double; 
             val sub = price1 - price2;
             porcent = sub / price1 * 100;
             if (porcent >= 30) {
-                println("${Usuariobj.nome}, é mais barato abastecer com álcool no posto Wayne Oil.");
+                println("${Usuariobj.nome}, é mais barato abastecer com álcool no $nomePosto.");
             } else {
-                println("${Usuariobj.nome}, é mais barato abastecer com gasolina no posto Wayne Oil.");
-            };
-        } else if (price2 > price1) {
-            val sub = price2 - price1;
-            porcent = sub / price2 * 100;
-            if (porcent >= 30) {
-                println("${Usuariobj.nome}, é mais barato abastecer com álcool no posto Wayne Oil.");
-            } else {
-                println("${Usuariobj.nome}, é mais barato abastecer com gasolina no posto Wayne Oil.");
-            };
-        };
+                println("${Usuariobj.nome}, é mais barato abastecer com gasolina no $nomePosto.");
+         };
     };
 };
 /*
