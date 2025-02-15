@@ -13,33 +13,25 @@ class Abastecer {
         println("Qual o valor do gasolina no posto Stark petrol?");
         val priceGasStark = readln().toDouble();
         when {
-            priceGasWayne < priceGasStark || priceAlchoolWayne < priceGasStark -> {
-                if (priceGasWayne > priceAlchoolWayne) {
-                    porcentCalculator(priceGasWayne, priceAlchoolWayne, "Wayne oil");
-                } else {
-                    porcentCalculator(priceAlchoolWayne, priceGasWayne, "Wayne oil");
-                };
-            };
+        priceGasWayne < priceGasStark || priceAlchoolWayne < priceGasStark ->
+                porcentCalculator(priceGasWayne, priceAlchoolWayne, "Wayne oil");
 
-            priceGasWayne > priceGasStark || priceAlchoolWayne > priceGasStark -> {
-                if (priceGasStark > priceAlchoolStark) {
-                    porcentCalculator(priceGasStark, priceAlchoolStark, "Stark petrol");
-                } else {
-                    porcentCalculator(priceAlchoolStark, priceGasStark, "Stark petrol");
-                };
-            };
+        priceGasWayne > priceGasStark || priceAlchoolWayne > priceGasStark -> 
+            porcentCalculator(priceGasStark, priceAlchoolStark, "Stark petrol");
         };
     };
 
     private fun porcentCalculator(price1: Double, price2: Double, nomePosto: String) {
-        val porcent: Double; 
-            val sub = price1 - price2;
-            porcent = sub / price1 * 100;
-            if (porcent >= 30) {
-                println("${Usuariobj.nome}, é mais barato abastecer com álcool no $nomePosto.");
-            } else {
-                println("${Usuariobj.nome}, é mais barato abastecer com gasolina no $nomePosto.");
-         };
+        val precoPorLitro = price1 * 42
+        val df = DecimalFormat("#.#", DecimalFormatSymbols(Locale.ENGLISH));
+        val arredondado = df.format(precoPorLitro * 0.7).toDouble();
+        assert(arredondado == 0.1);
+
+        if (price2 <= arredondado) {
+            println("É mais barato abastecer com álcool no $nomePosto.");
+        } else {
+            println("É mais barato abastecer com gasolina no $nomePosto.");
+        };
     };
 };
 /*
@@ -48,8 +40,5 @@ class Abastecer {
 * tanque tem 42L de capacidade e sempre será o volume a ser abastecido
 * Quando o alcool estiver 30% mais barato que a gasolina, é mais barato abastecer com alcool.
 *
-* alcool - gas = resultado
-*
-* resultado / maiorValor * 100 (pode ser gasolina ou alcool);
-*
+* 100% - 30% = 70% -> price1 * 70% = 4,2 ou 4,1999 no Kotlin, mas basta arredondar.
 * */
